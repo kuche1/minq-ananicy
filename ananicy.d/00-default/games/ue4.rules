@@ -1,0 +1,5 @@
+# unreal engine 4: https://www.unrealengine.com
+{ "name": "UE4Editor", "type": "game" }
+{ "name": "ShaderCompileWorker", "type": "game" }
+{ "name": "UnrealLightmass", "type": "game" }
+{ "name": "UnrealPak", "type": "game" }

@@ -2,7 +2,7 @@
 # Rules for Steam and Steam Apps: http://store.steampowered.com
 { "name": "steam", "type": "game-launcher" }
 # Steam integrated web browser
-{ "name": "steamwebhelper", "type": "BG_CPUIO" }
+{ "name": "steamwebhelper", "type": "web-browser" }
 
 # https://store.steampowered.com/app/730
 { "name": "csgo_linux64", "type": "game"}

@@ -3,4 +3,4 @@
 { "name": "Steam.exe", "type": "game-launcher" }
 
 # Steam integrated web browser
-{ "name": "steamwebhelper.exe", "type": "BG_CPUIO" }
+{ "name": "steamwebhelper.exe", "type": "web-browser" }

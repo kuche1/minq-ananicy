@@ -1,2 +1,0 @@
-# youtube-dl - video downloader https://rg3.github.io/youtube-dl/
-{ "name": "youtube-dl", "type": "BG_CPUIO" }

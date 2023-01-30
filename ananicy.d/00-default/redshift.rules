@@ -1,4 +1,0 @@
-# Sets colour temperature of screen according to time of day
-# http://jonls.dk/redshift/
-
-{ "name": "redshift", "type": "BG_CPUIO" }
