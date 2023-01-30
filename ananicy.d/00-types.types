@@ -51,6 +51,8 @@
 
 {"type":"document-viewer"}
 
+{"type":"download-manager"}
+
 {"type":"email-client"}
 
 {"type":"file-manager"}
@@ -67,6 +69,8 @@
 {"type":"image-viewer"}
 
 {"type":"music-player"}
+
+{"type":"multimedia-editor"}
 
 {"type":"p2p-client"}
 
@@ -90,7 +94,7 @@
 
 {"type":"VPN"}
 
-{"type":"VM"}
+{"type":"VM,CPU_H,IO_H",    "ionice":7}
 
 {"type":"web-browser"}
 
@@ -101,7 +105,7 @@
 {"type":"TODO"}
 
 ########################
-### Depricated types ###
+### Deprecated types ###
 ########################
 
 #{"type":"Heavy_CPU", "nice":19, "ioclass":"best-effort", "ionice":7, "cgroup":"cpu90"}
