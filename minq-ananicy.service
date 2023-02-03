@@ -1,11 +1,11 @@
 [Unit]
-Description=Ananicy - ANother Auto NICe daemon
+Description=Minq-Ananicy - ANother Auto NICe daemon(kuche1 Fork). 
 After=local-fs.target
 
 [Service]
 Type=notify
 ExecStartPre=/sbin/sysctl -e kernel.sched_autogroup_enabled=0
-ExecStart=/usr/bin/ananicy start
+ExecStart=/usr/bin/minq-ananicy start
 ExecStopPost=/sbin/sysctl -e kernel.sched_autogroup_enabled=1
 Nice=19
 SuccessExitStatus=143

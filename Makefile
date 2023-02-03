@@ -11,9 +11,9 @@ ANANICY_D_T_I := $(patsubst $(SRC_DIR)/%.types, $(PREFIX)/etc/%.types, $(ANANICY
 ANANICY_D_G := $(shell find $(SRC_DIR)/ananicy.d -type f -name "*.cgroups")
 ANANICY_D_G_I := $(patsubst $(SRC_DIR)/%.cgroups, $(PREFIX)/etc/%.cgroups, $(ANANICY_D_G))
 
-A_SERVICE := $(PREFIX)/lib/systemd/system/ananicy.service
+A_SERVICE := $(PREFIX)/lib/systemd/system/minq-ananicy.service
 A_CONF := $(PREFIX)/etc/ananicy.d/ananicy.conf
-A_BIN := $(PREFIX)/usr/bin/ananicy
+A_BIN := $(PREFIX)/usr/bin/minq-ananicy
 
 
 default:  help
