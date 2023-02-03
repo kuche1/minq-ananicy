@@ -30,10 +30,10 @@ $(PREFIX)/etc/%.rules: $(SRC_DIR)/%.rules
 $(A_CONF): $(SRC_DIR)/ananicy.d/ananicy.conf
 	install -Dm644 $< $@
 
-$(A_BIN): $(SRC_DIR)/ananicy.py
+$(A_BIN): $(SRC_DIR)/minq-ananicy.py
 	install -Dm755 $< $@
 
-$(A_SERVICE): $(SRC_DIR)/ananicy.service
+$(A_SERVICE): $(SRC_DIR)/minq-ananicy.service
 	install -Dm644 $< $@
 
 
