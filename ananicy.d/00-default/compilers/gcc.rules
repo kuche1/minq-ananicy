@@ -1,1 +1,19 @@
-{ "name": "gcc", "type": "compiler" }
+# C compilation
+{ "name": "gcc",         "type": "compiler" }
+{ "name": "cc",          "type": "compiler" }
+{ "name": "cc1",         "type": "compiler" }
+{ "name": "c99",         "type": "compiler" }
+{ "name": "c89",         "type": "compiler" }
+
+# C++ compilation
+{ "name": "g++",         "type": "compiler" }
+{ "name": "c++",         "type": "compiler" }
+{ "name": "cpp",         "type": "compiler" }
+{ "name": "cc1plus",     "type": "compiler" }
+
+# linking
+{ "name": "lto1",        "type": "compiler" }
+{ "name": "lto-wrapper", "type": "compiler" }
+
+# other
+{ "name": "collect2",    "type": "compiler" }
