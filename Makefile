@@ -11,9 +11,9 @@ ANANICY_D_T_I := $(patsubst $(SRC_DIR)/%.types, $(PREFIX)/etc/%.types, $(ANANICY
 ANANICY_D_G := $(shell find $(SRC_DIR)/ananicy.d -type f -name "*.cgroups")
 ANANICY_D_G_I := $(patsubst $(SRC_DIR)/%.cgroups, $(PREFIX)/etc/%.cgroups, $(ANANICY_D_G))
 
-A_SERVICE := $(PREFIX)/lib/systemd/system/ananicy.service
+A_SERVICE := $(PREFIX)/lib/systemd/system/minq-ananicy.service
 A_CONF := $(PREFIX)/etc/ananicy.d/ananicy.conf
-A_BIN := $(PREFIX)/usr/bin/ananicy
+A_BIN := $(PREFIX)/usr/bin/minq-ananicy
 
 
 default:  help
@@ -30,10 +30,10 @@ $(PREFIX)/etc/%.rules: $(SRC_DIR)/%.rules
 $(A_CONF): $(SRC_DIR)/ananicy.d/ananicy.conf
 	install -Dm644 $< $@
 
-$(A_BIN): $(SRC_DIR)/ananicy.py
+$(A_BIN): $(SRC_DIR)/minq-ananicy.py
 	install -Dm755 $< $@
 
-$(A_SERVICE): $(SRC_DIR)/ananicy.service
+$(A_SERVICE): $(SRC_DIR)/minq-ananicy.service
 	install -Dm644 $< $@
 
 

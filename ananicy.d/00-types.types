@@ -29,27 +29,48 @@
 # The `L` in `CPU_L` stands for `low priority`  -> some applications might be less relevant / stress the system when given the priority of the base class
 # Same goes for `IO_U`, `IO_H` and `IO_L`
 
-### Generic Types
+### Generic Types (Medium/Unchanged IO CPU and other things)
 
 {"type":"archiver", "nice":1, "ionice":5}
 
-{"type":"audio-server"}
+## {"type":"audio-server,CPU_H,IO_U"} Needs test
 
-{"type":"chat"}
+{"type":"audio-server", "ioclass":"best-effort", "ionice":"3"}
 
-{"type":"common-utility"}
+{"type":"chat", "ioclass":"idle"}
 
-{"type":"compiler", "nice":1}
+{"type":"common-utility", "ioclass":"best-effort"}
+
+{"type":"compiler", "nice":"1",}
+
+{"type":"compiler,CPU_H"}
 
 {"type":"database"}
 
-# desktop environment, window manager or any integral part of a desktop (note: audio-server already has it's own category)
+### Multimedia (Video Player, Editor, etc)
+
+{"type":"image-editor"}
+
+{"type":"image-viewer"}
+
+{"type":"music-player"}
+
+{"type":"multimedia-editor"}
+
+{"type":"video-player"}
+
+### Desktop Environment, window manager or any integral part of a desktop (note: audio-server already has it's own category)
 {"type":"DEWM"}
+
 
 # TODO split into `text editor`, `document editor` and `IDE`?
 {"type":"document-editor"}
 
 {"type":"document-viewer"}
+
+{"type":"IDE"}
+
+{"type":"download-manager"}
 
 {"type":"email-client"}
 
@@ -57,16 +78,12 @@
 
 {"type":"file-sync", "nice":19, "ionice":7}
 
-# note: increasing some games' priority might cause a crash
+### Game (Game Launchers, Emulators, etc)
+### note: increasing some games' priority might cause a crash
+
 {"type":"game", "nice":-20, "ionice":0}
 
 {"type":"game-launcher"}
-
-{"type":"image-editor"}
-
-{"type":"image-viewer"}
-
-{"type":"music-player"}
 
 {"type":"p2p-client"}
 
@@ -76,9 +93,11 @@
 
 {"type":"server", "nice":1}
 
-# some services might require less resources than others
-{"type":"service",            "nice":1, "ionice":5}
-{"type":"service,CPU_U,IO_L",           "ionice":7}
+### some services might require less resources than others
+
+{"type":"service", "nice":1, "ionice":5}
+
+{"type":"service,CPU_U,IO_L"}
 
 {"type":"screenshotter"}
 
@@ -86,11 +105,15 @@
 
 {"type":"torrent", "nice":1, "ionice":5}
 
-{"type":"video-player"}
-
 {"type":"VPN"}
 
-{"type":"VM"}
+### Virtual Machine (QEMU, Virtual Box, etc)
+
+{"type":"VM", "ionice":"7"}
+
+{"type":"VM,CPU_H,IO_H"}
+
+### Web Browsers (Firefox, Chrome, Chromium and Chrome/Electron Based)
 
 {"type":"web-browser"}
 
@@ -101,7 +124,7 @@
 {"type":"TODO"}
 
 ########################
-### Depricated types ###
+### Deprecated types ###
 ########################
 
 #{"type":"Heavy_CPU", "nice":19, "ioclass":"best-effort", "ionice":7, "cgroup":"cpu90"}

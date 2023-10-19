@@ -1,2 +1,0 @@
-# tor: https://www.torproject.org/
-{ "name": "tor", "type": "BG_CPUIO" }

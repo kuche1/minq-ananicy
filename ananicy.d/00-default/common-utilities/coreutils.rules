@@ -1,0 +1,24 @@
+# Some rules for computationally or IO expensive tools from the GNU coreutils
+{ "name": "cat",       "type": "common-utility" }
+{ "name": "cksum",     "type": "common-utility" }
+{ "name": "comm",      "type": "common-utility" }
+{ "name": "dd",        "type": "common-utility" }
+{ "name": "df",        "type": "common-utility" }
+{ "name": "du",        "type": "common-utility" }
+{ "name": "install",   "type": "common-utility" }
+{ "name": "join",      "type": "common-utility" }
+{ "name": "md5sum",    "type": "common-utility" }
+{ "name": "mkdir",     "type": "common-utility" }
+{ "name": "mv",        "type": "common-utility" }
+{ "name": "rm",        "type": "common-utility" }
+{ "name": "rmdir",     "type": "common-utility" }
+{ "name": "sha1sum",   "type": "common-utility" }
+{ "name": "sha256sum", "type": "common-utility" }
+{ "name": "sha384sum", "type": "common-utility" }
+{ "name": "sha512sum", "type": "common-utility" }
+{ "name": "shred",     "type": "common-utility" }
+{ "name": "sort",      "type": "common-utility" }
+{ "name": "sum",       "type": "common-utility" }
+{ "name": "tac",       "type": "common-utility" }
+{ "name": "tee",       "type": "common-utility" }
+{ "name": "wc",        "type": "common-utility" }
