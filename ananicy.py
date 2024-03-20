@@ -430,6 +430,14 @@ class Ananicy:
             return ""
         return tmp[1].rstrip('"')
 
+    def __check_bool_field(self, value, field_name):
+        if type(value) == bool:
+            return value
+        elif value is None:
+            return False
+        else:
+            raise Failure(f"{field_name} must be boolean")
+
     def __check_nice(self, nice):
         if nice:
             if not -20 <= nice <= 19:
@@ -634,6 +642,11 @@ class Ananicy:
         key = (name, cmdlines)
 
         self.rules[key] = {
+            "name_is_regexp":
+                self.__check_bool_field(
+                    line.get("name_is_regexp"),
+                    "name_is_regexp",
+                ),
             "nice": self.__check_nice(line.get("nice")),
             "ioclass": line.get("ioclass"),
             "ionice": self.__check_ionice(line.get("ionice")),
@@ -713,9 +726,17 @@ class Ananicy:
     def get_tpid_rule(self, tpid: TPID):
         rule_cmdlines = tpid.cmdline
         for rule_name in [tpid.cmd, tpid.stat_name]:
-            for key in self.rules:
+            for key, rule_params in self.rules.items():
                 name,cmdlines = key
-                if name == rule_name:
+
+                # XXX: This field is always present
+                # Depending on `name_is_regexp`, `name` is checked differently
+                if rule_params['name_is_regexp']:
+                    name_matches = name == rule_name
+                else:
+                    name_matches = re.search(name, rule_name)
+
+                if name_matches:
                     if cmdlines:
                         for cl in cmdlines:
                             if cl not in rule_cmdlines:
