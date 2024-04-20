@@ -10,11 +10,15 @@ For more information [click here](https://github.com/kuche1/minq-ananicy#install
 
 More, updated and better organised rules.
 
+---
+
 Support for cmdline in rules added. This is particularly useful for applications that share the same name (looking at you Java). See the `freenet` rule as an example:
 ```
 { "name": "java", "cmdlines": ["freenet.node.NodeStarter"], "type": "service" }
 ```
 This translates to: apply the rule to any process named `java`, that received `freenet.node.NodeStarter` as a command line argument. You can add more than one "cmdlines" in case you want to fine tune your rules.
+
+---
 
 Support for matching cmd by regexp:
 
