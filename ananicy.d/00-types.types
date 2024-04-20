@@ -46,7 +46,7 @@
 # desktop environment, window manager or any integral part of a desktop (note: audio-server already has it's own category)
 {"type":"DEWM"}
 
-# TODO split into `text editor`, `document editor` and `IDE`?
+# perhaps this needs to be split into `text editor`, `document editor` and `IDE`? or perhaps not
 {"type":"document-editor"}
 
 {"type":"document-viewer"}
@@ -101,7 +101,7 @@
 {"type":"TODO"}
 
 ########################
-### Depricated types ###
+### Deprecated types ###
 ########################
 
 #{"type":"Heavy_CPU", "nice":19, "ioclass":"best-effort", "ionice":7, "cgroup":"cpu90"}
