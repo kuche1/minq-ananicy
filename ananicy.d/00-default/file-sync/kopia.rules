@@ -1,0 +1,2 @@
+# Kopia backup server: https://kopia.io/
+{ "name": "kopia", "type": "file-sync" }
